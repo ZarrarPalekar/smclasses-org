@@ -1,17 +1,21 @@
-import React from "react";
+import React, { Fragment } from "react";
+import { Container } from "react-bootstrap";
 import { Routes, Route } from "react-router-dom";
-import About from "./components/About";
-import Home from "./components/Home";
-import Navbar from "./components/Navbar";
+import About from "./components/About/About";
+import Home from "./components/Home/Home";
+import Navbar from "./components/Navbar/Navbar";
+import "./App.css";
 
 function App() {
   return (
     <>
       <Navbar />
-      <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/about" element={<About />} />
-      </Routes>
+      <div className="App">
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/about" element={<About />} />
+        </Routes>
+      </div>
     </>
   );
 }
