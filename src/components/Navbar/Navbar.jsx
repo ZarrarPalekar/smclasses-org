@@ -1,6 +1,6 @@
 import React from "react";
 import { Container, Nav, Navbar as Navigator } from "react-bootstrap";
-import { Link } from "react-router-dom";
+import { NavLink, Link } from "react-router-dom";
 import "./navbar.css";
 
 const Navbar = () => {
@@ -12,16 +12,26 @@ const Navbar = () => {
         </Navigator.Brand>
         <Navigator.Toggle aria-controls="basic-navbar-nav" />
         <Navigator.Collapse id="basic-navbar-nav">
-          <Nav className="ml-auto" activeKey="/">
+          <Nav activeKey="/">
             <Nav.Item>
-              <Nav.Link as={Link} to="/">
+              <NavLink
+                to="/"
+                className={({ isActive }) =>
+                  isActive ? "nav-item active" : "nav-item inactive"
+                }
+              >
                 Home
-              </Nav.Link>
+              </NavLink>
             </Nav.Item>
             <Nav.Item>
-              <Nav.Link as={Link} to="/about">
+              <NavLink
+                to="/about"
+                className={({ isActive }) =>
+                  isActive ? "nav-item active" : "nav-item inactive"
+                }
+              >
                 About
-              </Nav.Link>
+              </NavLink>
             </Nav.Item>
           </Nav>
         </Navigator.Collapse>

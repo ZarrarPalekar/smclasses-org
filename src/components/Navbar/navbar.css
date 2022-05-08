@@ -5,3 +5,28 @@
 .nav-container {
   margin: 1rem !important;
 }
+.nav-item {
+  text-decoration: none !important;
+  margin-left: 1rem;
+  color: #ffffff;
+}
+
+.nav-item:hover {
+  color: #ffffff;
+}
+
+.active {
+  background-color: bisque;
+  border-radius: 20px;
+  -webkit-border-radius: 20px;
+  -moz-border-radius: 20px;
+  -ms-border-radius: 20px;
+  -o-border-radius: 20px;
+  align-items: center;
+  padding: 1rem;
+  color: black;
+}
+
+.inactive {
+  padding: 1rem;
+}

@@ -1,4 +1,7 @@
 .App {
-  padding: 0 1rem 0 1rem !important;
-  margin: 1rem !important;
+  background-color: bisque;
+}
+
+.app-container {
+  padding: 1rem !important;
 }
